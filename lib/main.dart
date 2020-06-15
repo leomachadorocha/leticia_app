@@ -37,29 +37,33 @@ class MyApp extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              Container(
-                color: Colors.amber,
-                margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 25.0),
-                padding: EdgeInsets.all(5.0),
-                child: Row(
-                  children: <Widget>[
-                    //Icon(AssetImage('assets/images/tiktok-logo.ico'),),
-                    ImageIcon(
+              SizedBox(
+                height: 25.0,
+                width: 200.0,
+                child: Divider(
+                  color: Colors.white,
+                ),
+              ),
+              Card(shadowColor: Colors.white70,elevation: 12.0,
+                  color: Colors.amber,
+                  margin:
+                      EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
+                  child: ListTile(
+                    leading: ImageIcon(
                       AssetImage('assets/images/tiktok-logo.ico'),
                       color: Colors.deepPurple.shade900,
                       size: 40.0,
                     ),
-                    SizedBox(width: 15.0,),
-                    Text("@lele.romano",
-                    style: TextStyle(
-                      color: Colors.deepPurple.shade800,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16.0,
-                      letterSpacing: 2.0,
-                    ),),
-                  ],
-                ),
-              ),
+                    title: Text(
+                      "@lele.romano",
+                      style: TextStyle(
+                        color: Colors.deepPurple.shade800,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0,
+                        letterSpacing: 2.0,
+                      ),
+                    ),
+                  )),
             ],
           ),
         ),
